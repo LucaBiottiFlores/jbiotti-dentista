@@ -71,12 +71,11 @@ body {
 .section-title { font-size: 30px; letter-spacing: -0.01em; font-weight: 650; margin-bottom: 28px; }
 
 /* Sobre mí */
-.about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
+.about-text { max-width: 760px; }
 .about-text p { margin-bottom: 16px; color: var(--text); }
 .facts { list-style: none; margin-top: 8px; }
 .facts li { display: flex; gap: 16px; padding: 12px 0; border-top: 1px solid var(--border); font-size: 15px; }
 .facts li span { min-width: 120px; color: var(--muted); }
-.about-photo img { width: 100%; border-radius: var(--radius); }
 
 /* Cards */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -89,6 +88,17 @@ body {
 .formacion-text h3 { font-size: 20px; margin-bottom: 8px; }
 .formacion-text p { color: var(--muted); }
 .diploma img { width: 100%; max-width: 420px; border-radius: var(--radius); border: 1px solid var(--border); display: block; margin: 0 auto; }
+
+/* Galería */
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.gallery-item { margin: 0; }
+.gallery-item img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); display: block; }
+
+/* Ubicación */
+.ubicacion-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+.map-wrapper { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; line-height: 0; }
+.map-wrapper iframe { display: block; }
+.ubicacion-info { display: flex; flex-direction: column; gap: 22px; }
 
 /* Contacto */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -106,7 +116,7 @@ body {
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; padding: 48px 24px; }
   .hero h1 { font-size: 36px; }
-  .about-grid, .formacion-grid, .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .formacion-grid, .contact-grid, .ubicacion-grid, .gallery { grid-template-columns: 1fr; gap: 28px; }
   .cards { grid-template-columns: 1fr 1fr; }
   .hero-photo { order: -1; }
   .hero-photo img { aspect-ratio: 4 / 4; }
